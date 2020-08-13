@@ -25,9 +25,10 @@ for(let i=0; i<textArea.length; i++) {
 
 // Buttons that send input info to local storage
 
-$("8amBtn").on("click", function() {
-    let eightTask = $("#8").val();
-    localStorage.setItem("8am", eightTask);
+$("8amBtn").on("click", function(event) {
+    event.preventDefault();
+        let eightTask = $("#8").val();
+        localStorage.setItem("8am", eightTask);
 })
 $("9amBtn").on("click", function() {
     let nineTask = $("#9").val();
@@ -65,3 +66,6 @@ $("5pmBtn").on("click", function() {
     let fiveTask = $("#5").val();
     localStorage.setItem("5pm", fiveTask);
 })
+
+
+
